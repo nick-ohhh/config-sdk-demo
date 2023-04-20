@@ -15,13 +15,13 @@ myConfig
 
 // Instantiate new Workflow and add jobA
 const dynamicWorkflow = new CircleCI.Workflow("dynamic-workflow");
-dynamicWorkflow.addJob(jobA);
+dynamicWorkflow.addJob(bazelBuild);
 
 // Conditionally add bazelBuild
 // This condition could be based on anything from the response of an API call
 // to the contents of a file
-if (1 == 1) {
-    dynamicWorkflow.addJob(bazelBuild);
+if (1 == 0) {
+    dynamicWorkflow.addJob(jobA);
 }
 
 // Add the dynamic workflow to the config
