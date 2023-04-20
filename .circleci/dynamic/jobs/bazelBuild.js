@@ -10,4 +10,5 @@ const bazelBuildpostgres = new CircleCI.Job("bazelBuildpostgres", postgres);
 bazelBuildpostgres.addStep(new CircleCI.commands.Checkout());
 bazelBuildpostgres.addStep(new CircleCI.commands.Run({ command: "echo test for go and postgres images" }));
 
-module.exports = bazelBuild;
+module.exports = bazelBuildgo;
+module.exports = bazelBuildpostgres;
