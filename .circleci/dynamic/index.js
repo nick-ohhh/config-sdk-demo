@@ -2,7 +2,6 @@ const CircleCI = require("@circleci/circleci-config-sdk");
 
 // Import Config Components
 const jobA = require("./jobs/jobA");
-// const bazelBuild = require("./jobs/bazelBuild");
 const bazelBuildgo = require("./jobs/bazelBuild");
 const bazelBuildpostgres = require("./jobs/bazelBuild");
 
@@ -20,7 +19,7 @@ const dynamicWorkflow = new CircleCI.Workflow("bazel-image-build");
 dynamicWorkflow.addJob(bazelBuildgo);
 dynamicWorkflow.addJob(bazelBuildpostgres)
 
-// Conditionally add bazelBuild
+// Conditionally add jobA
 // This condition could be based on anything from the response of an API call
 // to the contents of a file
 if (1 == 0) {

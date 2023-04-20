@@ -1,6 +1,6 @@
 const CircleCI = require("@circleci/circleci-config-sdk");
-const go = require("../executors/go-postgres");
-const postgres = require("../executors/go-postgres");
+const go = require("../executors/go");
+const postgres = require("../executors/postgres");
 
 const bazelBuildgo = new CircleCI.Job("bazelBuildgo", go);
 bazelBuildgo.addStep(new CircleCI.commands.Checkout());
