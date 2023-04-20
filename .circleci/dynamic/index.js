@@ -3,7 +3,7 @@ const CircleCI = require("@circleci/circleci-config-sdk");
 // Import Config Components
 const jobA = require("./jobs/jobA");
 const bazelBuild = require("./jobs/bazelBuild");
-const bazelBuild = require("./jobs/bazelBuild");
+//const bazelBuild = require("./jobs/bazelBuild");
 
 // Initiate a new Config
 const myConfig = new CircleCI.Config()
