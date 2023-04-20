@@ -11,11 +11,13 @@ const myConfig = new CircleCI.Config()
 // Add elements to the config
 myConfig
     .addJob(jobA)
-    .addJob(bazelBuild)
+    .addJob(bazelBuildgo)
+    .addJob(bazelBuildpostgrest)
 
 // Instantiate new Workflow and add jobA
-const dynamicWorkflow = new CircleCI.Workflow("dynamic-workflow");
-dynamicWorkflow.addJob(bazelBuild);
+const dynamicWorkflow = new CircleCI.Workflow("bazel-image-build");
+dynamicWorkflow.addJob(bazelBuildgo);
+dynamicWorkflow.addJob(bazelBuildpostgrest)
 
 // Conditionally add bazelBuild
 // This condition could be based on anything from the response of an API call
